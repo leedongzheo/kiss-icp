@@ -36,7 +36,7 @@ struct HybridCorrespondence {
 };
 // ----------------------------------CACH 1--------------------------------------
 double ComputeAdaptivePlaharityThreshold(const std::vector<Eigen::Vector3d>& neighbors){
-    double base = 0.03;
+    double base = 0.02;
     double min_thr = 0.01, max_thr = 0.2;
     double thr = base*20.0/std::max(20.0, static_cast<double>(neighbors.size()));
     return std::clamp(thr, min_thr, max_thr);
